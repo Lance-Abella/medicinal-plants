@@ -75,7 +75,7 @@ class LandingScreen extends StatelessWidget {
           Center(
             child: GestureDetector(
               onTap: () {
-              Navigator.pushNamed(context, '/home');
+              Navigator.pushNamed(context, '/navbar');
             },
               child: Container(
                 margin: EdgeInsets.only(top: height*.8),
