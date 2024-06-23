@@ -2,10 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medicinal_plants/src/common/constants/color/medicinal_colors.dart';
 
 import '../../../common/list-tile/list_tile.dart';
-import '../../../common/textstyle/medicinal_themes.dart';
 import '../data/collection_screen_data.dart';
 
 class ListTileScreen extends StatelessWidget {
@@ -14,24 +12,23 @@ class ListTileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-		double height = MediaQuery.of(context).size.height;
+    double height = MediaQuery.of(context).size.height;
 
     return Stack(
-				children: [
-
-					ListView.builder(
-						itemCount: CollectionScreenData.items.length,
-						itemBuilder: (context, index) {
-							return CustomListTile(
-          image: CollectionScreenData.items[index]['image']!,
-          name: CollectionScreenData.items[index]['name']!,
-          category: CollectionScreenData.items[index]['category']!,
-          width: width,
-          height: height,
-        );
-						},
-					),
-				],
-			);
+      children: [
+        ListView.builder(
+          itemCount: CollectionScreenData.items.length,
+          itemBuilder: (context, index) {
+            return CustomListTile(
+              image: CollectionScreenData.items[index]['image']!,
+              name: CollectionScreenData.items[index]['name']!,
+              category: CollectionScreenData.items[index]['category']!,
+              width: width,
+              height: height,
+            );
+          },
+        ),
+      ],
+    );
   }
 }
